@@ -1,9 +1,12 @@
 package data;
 
 import lombok.SneakyThrows;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+
 
 public class SQLHelper {
     private static QueryRunner runner = new QueryRunner();
@@ -15,6 +18,7 @@ public class SQLHelper {
 
     @SneakyThrows
     public static Connection getConn() {
+
         return DriverManager.getConnection(url, "app", "pass");
     }
 
@@ -35,7 +39,7 @@ public class SQLHelper {
         String result = "";
         var runner = new QueryRunner();
         try (var connection = getConn()) {
-            result = runner.query(connection, query, new ScalarHandler());
+            result = runner.query(connection, query, new ScalarHandler<>());
         }
         return result;
     }
