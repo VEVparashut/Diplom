@@ -39,5 +39,5 @@
 ## Документация
 
 1. [План автоматизации тестирования приложения "Путешествие дня"](https://github.com/VEVparashut/Diplom/blob/master/documents/Plan.md)
-2. [Отчёт по итогам тестирования приложения "Путешествие дня"]()
-3. [Отчёт о проведённой автоматизации приложения "Путешествие дня"]()
+2. [Отчёт по итогам тестирования приложения "Путешествие дня"](https://github.com/VEVparashut/Diplom/blob/master/documents/Report.md)
+3. [Отчёт о проведённой автоматизации приложения "Путешествие дня"](https://github.com/VEVparashut/Diplom/blob/master/documents/Summary.md)
