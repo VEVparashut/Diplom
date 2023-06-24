@@ -12,6 +12,8 @@ public class SQLHelper {
     private static QueryRunner runner = new QueryRunner();
 
     private static final String url = System.getProperty("db.url");
+    private static String user = System.getProperty("db.user");
+    private static String password = System.getProperty("db.password");
 
     private SQLHelper() {
     }
@@ -19,7 +21,7 @@ public class SQLHelper {
     @SneakyThrows
     public static Connection getConn() {
 
-        return DriverManager.getConnection(url, "app", "pass");
+        return DriverManager.getConnection(url, user, password);
     }
 
     @SneakyThrows
@@ -38,9 +40,8 @@ public class SQLHelper {
     private static String getResult(String query) {
         String result = "";
         var runner = new QueryRunner();
-        try (var connection = getConn()) {
-            result = runner.query(connection, query, new ScalarHandler<>());
-        }
+        var connection = DriverManager.getConnection(url, user, password);
+        result = runner.query(connection, query, new ScalarHandler<>());
         return result;
     }
 

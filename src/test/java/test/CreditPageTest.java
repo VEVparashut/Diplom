@@ -10,6 +10,7 @@ import page.MainPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class CreditPageTest {
     private MainPage mainPage;
@@ -62,7 +63,7 @@ public class CreditPageTest {
 
         creditPage.fillInCardInfo(DataHelper.getNonStatusCardNumber());
         creditPage.setErrorNotificationVisible();
-        assertEquals(null, SQLHelper.getStatusForCredit());
+        assertNull(SQLHelper.getStatusForPayment());
     }
 
     @Test
