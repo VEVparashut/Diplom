@@ -63,7 +63,7 @@ public class CreditPageTest {
 
         creditPage.fillInCardInfo(DataHelper.getNonStatusCardNumber());
         creditPage.setErrorNotificationVisible();
-        assertNull(SQLHelper.getStatusForPayment());
+        assertNull(SQLHelper.getStatusForCredit());
     }
 
     @Test

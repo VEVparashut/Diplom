@@ -70,22 +70,22 @@ public class CreditPage {
     }
 
     public void setRequiredFieldVisible() {
-        requiredField.shouldBe(visible, Duration.ofSeconds(15));
+        requiredField.shouldBe(visible, Duration.ofSeconds(4));
     }
 
     public void setInvalidFormatVisible() {
-        invalidFormat.shouldBe(visible, Duration.ofSeconds(15));
+        invalidFormat.shouldBe(visible, Duration.ofSeconds(4));
     }
 
     public void setInvalidCharMessageVisible() {
-        invalidCharMessage.shouldBe(visible, Duration.ofSeconds(15));
+        invalidCharMessage.shouldBe(visible, Duration.ofSeconds(4));
     }
 
     public void setInvalidCardExpirationDateMessageVisible() {
-        invalidCardExpirationDateMessage.shouldBe(visible, Duration.ofSeconds(15));
+        invalidCardExpirationDateMessage.shouldBe(visible, Duration.ofSeconds(4));
     }
 
     public void setCardExpiredMessageVisible() {
-        cardExpiredMessage.shouldBe(visible, Duration.ofSeconds(15));
+        cardExpiredMessage.shouldBe(visible, Duration.ofSeconds(4));
     }
 }
