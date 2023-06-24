@@ -20,7 +20,6 @@ public class SQLHelper {
 
     @SneakyThrows
     public static Connection getConn() {
-
         return DriverManager.getConnection(url, user, password);
     }
 
