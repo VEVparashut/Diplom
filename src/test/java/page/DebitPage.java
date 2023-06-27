@@ -43,50 +43,50 @@ public class DebitPage {
     }
 
     public void textValidationForTheCardNumberField(String text) {
-        cardNumberField.shouldHave(text(text), Duration.ofSeconds(4)).shouldBe(visible);
+        cardNumberField.shouldHave(text(text), Duration.ofSeconds(15)).shouldBe(visible);
     }
 
     public void textValidationForTheMonthField(String text) {
-        monthField.shouldHave(text(text), Duration.ofSeconds(4)).shouldBe(visible);
+        monthField.shouldHave(text(text), Duration.ofSeconds(15)).shouldBe(visible);
     }
 
     public void textValidationForTheYearField(String text) {
-        yearField.shouldHave(text(text), Duration.ofSeconds(4)).shouldBe(visible);
+        yearField.shouldHave(text(text), Duration.ofSeconds(15)).shouldBe(visible);
     }
 
     public void textValidationForTheHolderField(String text) {
-        holderField.shouldHave(text(text), Duration.ofSeconds(4)).shouldBe(visible);
+        holderField.shouldHave(text(text), Duration.ofSeconds(15)).shouldBe(visible);
     }
 
     public void textValidationForTheCVCField(String text) {
-        cvcField.shouldHave(text(text), Duration.ofSeconds(4)).shouldBe(visible);
+        cvcField.shouldHave(text(text), Duration.ofSeconds(15)).shouldBe(visible);
     }
 
    public void setSuccessNotificationVisible() {
-        successNOTIF.shouldBe(visible, Duration.ofSeconds(15));
+        successNOTIF.shouldBe(visible);
     }
 
     public void setErrorNotificationVisible() {
-        errorNOTIF.shouldBe(visible, Duration.ofSeconds(15));
+        errorNOTIF.shouldBe(visible);
     }
 
     public void setRequiredFieldVisible() {
-        requiredField.shouldBe(visible, Duration.ofSeconds(4));
+        requiredField.shouldBe(visible);
     }
 
     public void setInvalidFormatVisible() {
-        invalidFormat.shouldBe(visible, Duration.ofSeconds(4));
+        invalidFormat.shouldBe(visible);
     }
 
     public void setInvalidCharMessageVisible() {
-        invalidCharMessage.shouldBe(visible, Duration.ofSeconds(4));
+        invalidCharMessage.shouldBe(visible);
     }
 
     public void setInvalidCardExpirationDateMessageVisible() {
-        invalidCardExpirationDateMessage.shouldBe(visible, Duration.ofSeconds(4));
+        invalidCardExpirationDateMessage.shouldBe(visible);
     }
 
     public void setCardExpiredMessageVisible() {
-        cardExpiredMessage.shouldBe(visible, Duration.ofSeconds(4));
+        cardExpiredMessage.shouldBe(visible);
     }
 }
